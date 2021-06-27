@@ -1,0 +1,34 @@
+<!-- <slot name="header">Default Header</slot> -->
+<div class="chatbot-wrapper">
+    <div class="chat-styles" *ngIf="displayChat">
+        <p>
+            <span>
+                <img src="http://127.0.0.1:8080/src/assets/chase-logo.png" alt="Chase Logo" width="20" height="20">
+            </span>
+            Chat with Virtual Assistant
+            <span (click)="displayChat = !displayChat">
+                <img src="http://127.0.0.1:8080/src/assets/close-white.png" alt="Close Icon" width="20" height="20">
+            </span>
+        </p>
+        <div>
+            <table>
+                <tr>
+                    <th>User ID</th>
+                    <th>Title</th>
+                    <th>Body</th>
+                </tr>
+                <tr *ngFor="let data of apiData; let i = index">
+                    <ng-container *ngIf="i < 10">
+                        <td>{{data.id}}</td>
+                        <td>{{data.title}}</td>
+                        <td>{{data.body}}</td>
+                    </ng-container>
+                </tr>
+            </table>
+        </div> 
+    </div>
+    <button (click)="buttonClicked()" class="chatbot-button-styles" *ngIf="!displayChat">
+        <img src="http://127.0.0.1:8080/src/assets/chat-icon.png" alt="Chatbot" width="50" height="50">
+        <!-- {{botLabel}} -->
+    </button>
+</div>

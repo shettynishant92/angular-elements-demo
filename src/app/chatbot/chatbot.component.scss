@@ -1,0 +1,27 @@
+.chatbot-wrapper {
+    position: fixed;
+    float: right;
+    z-index: 1000;
+    bottom: 2em;
+    right: 2em;
+    text-align: right;
+    .chat-styles {
+        text-align: left;
+        border-radius: 10px;
+        background-color: whitesmoke;
+        height: 20em;
+        width: 17em;
+        overflow: scroll;
+        p {
+            background-color: #0846a8;
+            color: white;
+        }
+        img {
+            margin: 5px 5px 0;
+        }
+    }
+    .chatbot-button-styles {
+        background-color: transparent;
+        border: none;
+    }
+}
